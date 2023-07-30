@@ -6,11 +6,6 @@ Este projeto esta sendo desenvolvida para o curso de Pós-Gradução de Especial
 Esta aplicação terá as funcionalidade básicas para gerenciar um calendário de escola.
 
 
-# Funcionalidades
- - Cadastro agenda das aulas e provas
- - Pesquisa e lista das aulas e provas.
- 
-
 # 📖 Tópicos/Checklist
 
 [x] Criar o repositório no GitHub com a estrutura do Gitflow, ou seja, branches main e develop. <br>
