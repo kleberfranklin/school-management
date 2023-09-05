@@ -5,6 +5,8 @@ Gerenciamento de calendário de aulas e provas.
 Este projeto esta sendo desenvolvida para o curso de Pós-Gradução de Especialização Em Tecnologia Java da UTFPR.
 Esta aplicação terá as funcionalidade básicas para gerenciar um calendário de escola.
 
+## Protótipo
+https://www.figma.com/proto/3XCZx4NuwHCL5IInt8emYy/school-management?type=design&node-id=6-39&t=SrklKsFmBzioxjhX-0&scaling=min-zoom&page-id=1%3A5&starting-point-node-id=6%3A39
 
 # 📖 Tópicos/Checklist
 
