@@ -1,8 +1,21 @@
-  <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link active" href="#">Avaliações</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Horários das Aulas</a>
-    </li>
+<div class="navbar-fixed"  style="z-index: 1001 !important;">
+    <nav>
+    <div class="nav-wrapper white accent-4">
+      <a href="#!" class="brand-logo">
+        <img class="logo-img" src="assets/resources/imgs/logo.png" />
+      </a>
+      <span class="text-top">School Management</span>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger" ><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down" [hidden]="this.isHidePainel">
+        <li><a href="#" class="link-text" >Avaliações</a></li>
+        <li><a href="#" class="link-text" >Horários das Aulas</a></li>
+      </ul>
+    </div>
+    
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo" [hidden]="this.isHidePainel">
+    <li><a href="">Avaliações</a></li>
+    <li><a href="#">Horários das Aulas</a></li>
   </ul>
+</div>  
