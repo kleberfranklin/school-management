@@ -1,0 +1,87 @@
+<div class="container contact">
+  <div class="row">
+     <div class="col s3 offset-s5">
+      <h3>Avaliações</h3>
+    </div>  
+  </div>
+  <hr/>
+  <div class="row">
+    <div class="col s1 ">
+      <a routerLink="../registration-evaluation" class="btn-floating waves-effect waves-light blue" ><i class="material-icons">add</i></a>
+    </div>
+
+    <div class="col s1 offset-s10">
+      <button class="waves-effect waves-light btn blue" (click)="this.onUpdateDate()"><i class="material-icons">timer</i></button>
+    </div>
+    
+</div>
+
+    <div class="row">
+      <div class="col s12" >
+        <table class="highlight centered responsive-table">
+          <thead>
+            <tr>
+              <th data-field="td-date">Data</th>
+              <th data-field="td-type">Dia Semana</th>
+              <th data-field="td-value">Componente Curicular</th>
+              <th data-field="td-tax">Professor(a) Responsável</th>
+              <th data-field="td-tax">Tipo de Avaliação</th>
+              <th data-field="td-tax">Contéudos e Etapas</th>
+            </tr>
+          </thead>
+  
+          <tbody >
+            <tr>
+              <td>21/08</td>
+                <td>Segunda</td>
+                <td>Ciência</td>
+                <td>Paulo</td>
+                <td>Avliação Processual</td>
+                <td>Estudar pelo livro do 1º semestre: Capítulo 1 - Misturas do cotidiano, páginas 8, 10, 16.</td>
+                <td><i class="material-icons">edit</i></td>
+                <td><i class="material-icons">delete</i></td>
+            </tr>
+            <tr>
+                <td>21/08</td>
+                <td>Segunda</td>
+                <td>Ciência</td>
+                <td>Paulo</td>
+                <td>Avliação Processual</td>
+                <td>Estudar pelo livro do 1º semestre: Capítulo 1 - Misturas do cotidiano, páginas 8, 10, 16.</td>
+                <td> <i class="material-icons">edit</i></td>
+                <td><i class="material-icons">delete</i></td>
+              </tr>
+              <tr>
+                <td>21/08</td>
+                <td>Segunda</td>
+                <td>Ciência</td>
+                <td>Paulo</td>
+                <td>Avliação Processual</td>
+                <td>Estudar pelo livro do 1º semestre: Capítulo 1 - Misturas do cotidiano, páginas 8, 10, 16.</td>
+                <td> <i class="material-icons">edit</i></td>
+                <td><i class="material-icons">delete</i></td>
+              </tr>
+              <tr>
+                <td>21/08</td>
+                <td>Segunda</td>
+                <td>Ciência</td>
+                <td>Paulo</td>
+                <td>Avliação Processual</td>
+                <td>Estudar pelo livro do 1º semestre: Capítulo 1 - Misturas do cotidiano, páginas 8, 10, 16.</td>
+                <td> <i class="material-icons">edit</i></td>
+                <td><i class="material-icons">delete</i></td>
+              </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <app-panel
+      [update] = this.isUpdate
+      (evalutionEvent)="this.onReturnUpdate($event)"
+      ></app-panel>
+    </div>
+</div>
+  

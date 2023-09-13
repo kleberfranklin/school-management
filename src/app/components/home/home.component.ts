@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   getBackgroundImage() {
     return {
       'background-image':
-        'linear-gradient(rgba(137, 196, 244, .7), rgba(137, 196, 244, .9)), url(' +
+        'linear-gradient(rgba(225, 245, 254, .7), rgba(225, 245, 254, .9)), url(' +
         this.imageURL +
         ')',
     };

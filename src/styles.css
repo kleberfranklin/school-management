@@ -3,13 +3,11 @@
 @import "~material-icons/iconfont/material-icons.css";
 
 
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+h3 {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  main {
-    flex: 1 0 auto;
-  }
-
+div{
+  color:#708090;
+}

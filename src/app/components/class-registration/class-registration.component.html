@@ -1,0 +1,59 @@
+<div class="row">
+
+    <form class="col s6 offset-s3" >
+        <div class="row">
+            <div class="col s4 offset-s3">
+                <div class="card-panel ">
+                    <span class="blue-text text-darken-10">{{ano}}º Ano - Ensino Fundamental {{fundamental}}</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="input-field col s2">
+                <input placeholder="Placeholder" id="horario_inicio" type="time" class="validate">
+                <label for="horario_inicio">Horário inicio</label>
+            </div>
+            
+            <div class="input-field col s2">
+                    <input id="horario_fim" type="time" class="validate">
+                    <label for="horario_fim">Horário fim</label>
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="input-field col s8">
+                <input  id="dia_semana" type="text" class="validate">
+                <label class="active" for="dia_semana" aria-checked="false">Dia Semana</label>
+             
+                
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="input-field col s8">
+                <input id="materia" type="text" class="validate">
+                <label for="materia">Matéria</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s8">
+                <input id="professor" type="text" class="validate">
+                <label for="professor">Professor(a)</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s4">
+                <a class="waves-effect waves-light btn blue"><i class="material-icons right">save</i>Salvar</a>
+            </div>
+            <div class="input-field col s4">
+                <a  routerLink="/class-schedules" class="waves-effect waves-light btn blue"><i class="material-icons right">cancel</i>Cancelar</a>
+            </div>
+        </div>    
+    
+       
+    
+    </form>
+  </div>

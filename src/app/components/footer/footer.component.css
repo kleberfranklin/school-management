@@ -1,4 +1,8 @@
 .page-footer{
-    background-color: #A4D4E3;
+    background-color: #00A1D3;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-copyright{
+    color: black;
 }

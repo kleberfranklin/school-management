@@ -13,15 +13,22 @@
           <span class="text-password" >  <i class="material-icons">visibility</i>  {{ this.valor }} </span>
         </div>
       </div>
-      <div class="input-fieldcol">
+      <div class="input-field col s12">
         <select (change) ="this.onSelectChange($event)" >
-          <option value="" disabled selected>Selecione a rede</option>
+          <option value="" disabled selected></option>
           <option value="Municipal">Municipal</option>
           <option value="Estadual">Estadual</option>
           <option value="Federal">Federal</option>
           <option value="Federal">Privada</option>
         </select>
-        <label>Materialize Select</label>
+        <label>Rede escolar</label>
+      </div>
+      <div class="router-outlet">
+        <div class="input-field col s12">
+          <button class="btn waves-effect waves-effect blue" type="submit" name="action">Login
+            <i class="material-icons right"></i>
+          </button>
+        </div>
       </div>
     </form>
   </div>

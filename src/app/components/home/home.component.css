@@ -17,7 +17,9 @@
 
 .card-title{
     font-size: xx-large;
+    font-weight: bolder;
     text-align: center;
+    
 }
 .card-content{
     text-align: center;
