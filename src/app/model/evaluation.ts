@@ -1,10 +1,7 @@
-export class Evaluation {
-    public data!: string;
-    public componenteCuricular! : string;
-    public professor! : string;
-    public tipoAvaliacao!:string;
-    public conteudoEtapas!:string;
-
-constructor(){}
-
+export interface Evaluation {
+    data: string;
+    omponenteCuricular: string;
+    professor: string;
+    tipoAvaliacao:string;
+    conteudoEtapas:string;
 }

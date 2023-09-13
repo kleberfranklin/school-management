@@ -1,3 +1,4 @@
+import { User } from '../../../model/user';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  isHidePainel = false;
+  isHidePainel = true;
+  user!: User;
   
-  ngOnInit(): void {     
+  ngOnInit(): void {
+    this.user = new User('kleber@gmail.com', '123456', true);
   }
 
 }

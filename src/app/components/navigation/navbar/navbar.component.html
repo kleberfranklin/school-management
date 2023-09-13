@@ -6,17 +6,19 @@
       </a>
       <span class="text-top">School Management</span>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger" ><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down" [hidden]="this.isHidePainel">
+      <ul class="right hide-on-med-and-down" *ngIf="this.isHidePainel">
         <li><a routerLink="evalution" class="link-text" >Avaliações</a></li>
         <li><a routerLink="class-schedules" class="link-text" >Horários das Aulas</a></li>
+        <li><a routerLink="user" class="link-text" *ngIf="this.user.isAdmin" >Usuários</a></li>
       </ul>
     </div>
     
   </nav>
 
   <ul class="sidenav" id="mobile-demo" [hidden]="this.isHidePainel">
-    <li><a href="">Avaliações</a></li>
-    <li><a href="#">Horários das Aulas</a></li>
+    <li><a routerLink="evalution" class="link-text" >Avaliações</a></li>
+    <li><a routerLink="class-schedules" class="link-text" >Horários das Aulas</a></li>
+    <li><a routerLink="user" class="link-text" >Usuários</a></li>
   </ul>
 </div>
 <div class="space-nav"></div>  

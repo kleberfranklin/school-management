@@ -15,9 +15,9 @@ export class LoginComponent implements OnInit, AfterViewInit {
     M.FormSelect.init(elems, {});
   }
   
-  onSelectChange(event: Event){
-    // this.loginValue = (event.target as HTMLInputElement).value;
-    alert("Selecionou a rede de ensino: "+ (event.target as HTMLInputElement).value)
-  }
+  // onSelectChange(event: Event){
+  //   // this.loginValue = (event.target as HTMLInputElement).value;
+  //   alert("Selecionou a rede de ensino: "+ (event.target as HTMLInputElement).value)
+  // }
 }
 

@@ -1,5 +1,13 @@
 <div class="row">
-    <form class="col s3 offset-s4" #form="ngForm">
+  <div class="row">
+    <div class="col s4 offset-s4">
+        <div class="card-panel ">
+            <span class="blue-text text-darken-10"><h5> Login</h5></span>
+        </div>
+    </div>
+</div> 
+
+    <form class="col s4 offset-s4" #form="ngForm">
     <div class="row">
         <div class="input-field col s12">
         <input id="email" type="email" class="validate"  >
@@ -13,16 +21,6 @@
           <span class="text-password" >  <i class="material-icons">visibility</i>  {{ this.valor }} </span>
         </div>
       </div>
-      <div class="input-field col s12">
-        <select (change) ="this.onSelectChange($event)" >
-          <option value="" disabled selected></option>
-          <option value="Municipal">Municipal</option>
-          <option value="Estadual">Estadual</option>
-          <option value="Federal">Federal</option>
-          <option value="Federal">Privada</option>
-        </select>
-        <label>Rede escolar</label>
-      </div>
       <div class="router-outlet">
         <div class="input-field col s12">
           <button class="btn waves-effect waves-effect blue" type="submit" name="action">Login
@@ -31,4 +29,4 @@
         </div>
       </div>
     </form>
-  </div>
+</div>
