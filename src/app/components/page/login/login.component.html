@@ -7,18 +7,29 @@
     </div>
 </div> 
 
-    <form class="col s4 offset-s4" #form="ngForm">
+    <form class="col s4 offset-s4" (ngSubmit)="onLogin()" >
     <div class="row">
         <div class="input-field col s12">
-        <input id="email" type="email" class="validate"  >
+        <input 
+          id="email" 
+          name="email" 
+          type="email" 
+          class="validate" 
+          [(ngModel)]="this.loginUser.email" />
         <label for="email">Email</label>
         </div>
     </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="password" name="password"  type="password"   class="validate" [(ngModel)]="this.valor" >
+          <input 
+            id="password" 
+            name="password"  
+            type="password" 
+            class="validate"
+            [(ngModel)]="this.loginUser.password" />
+            
           <label for="password">Password</label>
-          <span class="text-password" >  <i class="material-icons">visibility</i>  {{ this.valor }} </span>
+          <!-- <span class="text-password" >  <i class="material-icons">visibility</i>  {{ this.valor }} </span> -->
         </div>
       </div>
       <div class="router-outlet">

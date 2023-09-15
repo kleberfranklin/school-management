@@ -1,9 +1,9 @@
 import { BehaviorSubject, Observable } from 'rxjs';
 
-import { User } from '../../../model/user';
+import { User } from '../model/user';
 import { Injectable } from "@angular/core";
-import { WebStorageUtil } from '../../util/web-storage-util';
-import { Constants } from '../../util/constants';
+import { WebStorageUtil } from '../util/web-storage-util';
+import { Constants } from '../util/constants';
 
 
 @Injectable({
@@ -56,12 +56,12 @@ export class userService{
         return this.users;
       }
     
-      notifyTotalUsers() {
-        this.userSource.next(this.getUsers()?.length);
-        // if (this.getUsers()?.length > 1) {
-        //   this.userSource.complete();
-        // }
-      }
+      // notifyTotalUsers() {
+      //   this.userSource.next(this.getUsers()?.length);
+      //   // if (this.getUsers()?.length > 1) {
+      //   //   this.userSource.complete();
+      //   // }
+      // }
     
       asObservable(): Observable<number> {
         return this.userSource;

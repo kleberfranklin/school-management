@@ -1,0 +1,87 @@
+{
+  "users": [
+    {
+      "name": "Kleber Franklin",
+      "email": "kleberfranklin@alunos.utfpr.edu.br",
+      "password": "123852",
+      "isAdmin": true
+    },
+    {
+      "id": "02",
+      "name": "Maria Fatima",
+      "email": "fatima@alunos.utfpr.edu.br",
+      "password": "654321",
+      "isAdmin": false
+    },
+    {
+      "name": "Paulo Roberto",
+      "email": "beto@alunos.utfpr.edu.br",
+      "password": "654321",
+      "isAdmin": true,
+      "id": "QBB6TPl"
+    }
+  ],
+  "evaluations": [
+    {
+      "data": "12/06",
+      "diaSemana": "Segunda-feira",
+      "componenteCuricular": "Ciência",
+      "professor": "José",
+      "tipoAvaliacao": "Processual",
+      "conteudoEtapas": "studar pelo livro do 1º semestre: Capítulo 1 - Misturas do cotidiano, páginas 8, 10, 16."
+    },
+    {
+      "id": "10",
+      "data": "14/06",
+      "diaSemana": "Quinta-feira",
+      "componenteCuricular": "Matématica",
+      "professor": "Tiago",
+      "tipoAvaliacao": "Multipla escolha",
+      "conteudoEtapas": "Livro paginas 15, 19, 22 a 26"
+    },
+    {
+      "data": "14/09",
+      "diaSemana": "Quinta-feira",
+      "componenteCuricular": "Angular",
+      "professor": "Roni",
+      "tipoAvaliacao": "entrega no gitHup",
+      "conteudoEtapas": "Depoly do projeto",
+      "id": "kFWKchT"
+    },
+    {
+      "id": "20",
+      "data": "15/06",
+      "diaSemana": "Quinta-feira",
+      "componenteCuricular": "Angulo",
+      "professor": "Roni",
+      "tipoAvaliacao": "Deploy",
+      "conteudoEtapas": "Entrega do projeto final"
+    },
+    {
+      "data": "28/09",
+      "diaSemana": "Segunda-feira",
+      "componenteCuricular": "fasdf",
+      "professor": "Caleber",
+      "tipoAvaliacao": "Mutiplo Escolha",
+      "conteudoEtapas": "teste",
+      "id": "FmyWbkE"
+    }
+  ],
+  "classeSchedules": [
+    {
+      "horario": "07h15min as 08h05min",
+      "diaSemana": "Segunda-feira",
+      "materia": "Matématica",
+      "professor": "Paulo",
+      "ensino": "5º"
+    },
+    {
+      "id": "10",
+      "horario": "08h05min as 08h55min",
+      "diaSemana": "Segunda-feira",
+      "materia": "Java I",
+      "professor": "Alessandro",
+      "ensino": "9º"
+    }
+  ]
+}

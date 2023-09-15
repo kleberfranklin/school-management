@@ -1,46 +1,120 @@
 <div class="row">
     
-    <form class="col s6 offset-s3" >
+    <form class="col s6 offset-s4" #form="ngForm" (submit)="onSubmit()" >
 
+        <div class="row">
+            <div class="input-field col s4">
+                <input 
+                    placeholder="dd/mm" 
+                    id="data" 
+                    name="data"
+                    type="text" 
+                    class="validate"
+                    [(ngModel)]="this.evaluation.data"
+                    maxlength="5"
+                    #data="ngModel"
+                    required />
+                <label class="active" for="data">Data</label>
+                <div class="red-text" [hidden]="data.valid || data.untouched">
+                    Por favor, informe a data.
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="input-field col s6">
-                <input placeholder="Placeholder" id="first_name" type="date" class="validate">
-                <label for="first_name">Data</label>
+                <input 
+                    placeholder="diaSemana" 
+                    id="diaSemana"
+                    name="diaSemana"
+                    type="text" 
+                    class="validate"
+                    [(ngModel)]="this.evaluation.diaSemana"
+                    #diaSemana="ngModel"
+                  
+                    required />
+                <label class="active" for="diaSemana">Dia Semana</label>
+                <div class="red-text" [hidden]="diaSemana.valid || diaSemana.untouched">
+                    Por favor, informe o dia da Semana.
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s8">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Componente Curicular</label>
+                <input 
+                    id="componenteCircular" 
+                    name="componenteCircular"
+                    type="text" 
+                    class="validate" 
+                    [(ngModel)]="this.evaluation.componenteCuricular"
+                    #componenteCuricular="ngModel"
+                    required />
+                <label class="active" for="componenteCuricular">Componente Curicular</label>
+                <div class="red-text" [hidden]="componenteCuricular.valid || componenteCuricular.untouched">
+                    Por favor, informe o Componente Curicular.
+                </div>
             </div>
         </div>
 
         <div class="row">
             <div class="input-field col s8">
-                <input  id="disabled" type="text" class="validate">
-                <label for="disabled">Professor(a) Responsável</label>
+                <input  
+                    id="professor"
+                    name="professor" 
+                    type="text" 
+                    class="validate"
+                    [(ngModel)]="this.evaluation.professor"
+                    #professor="ngModel"
+                    required/>
+                <label class="active" for="professor">Professor(a) Responsável</label>
+                <div class="red-text" [hidden]="professor.valid || professor.untouched">
+                    Por favor, informe o nome do professor(a).
+                </div>
             </div>
         </div>
     
         <div class="row">
             <div class="input-field col s8">
-                <input id="disabled" type="text" class="validate">
-                <label for="disabled">Tipo de Avaliação</label>
+                <input 
+                    id="tipoAvaliacao"
+                    name="tipoAvaliacao"
+                    type="text" 
+                    class="validate"
+                    [(ngModel)]="this.evaluation.tipoAvaliacao"
+                    #tipoAvaliacao="ngModel"
+                    required/>
+                <label class="active" for="disabled">Tipo de Avaliação</label>
+                 <div class="red-text" [hidden]="tipoAvaliacao.valid || tipoAvaliacao.untouched">
+                    Por favor, informe o tipo de avaliação.
+                </div>
             </div>
         </div>
 
         <div class="row">
             <div class="input-field col s12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Contéudos e etapas</label>
+                <textarea 
+                    id="conteudo"
+                    name="conteudo" 
+                    class="materialize-textarea"
+                    [(ngModel)]="this.evaluation.conteudoEtapas"
+                    #conteudo="ngModel"
+                    required></textarea>
+                <label class="active" for="textarea1">Contéudos e etapas</label>
+                <div class="red-text" [hidden]="conteudo.valid || conteudo.untouched">
+                    Por favor, informe os Contéudos e as etapas.
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s4">
-                <a class="waves-effect waves-light btn blue"><i class="material-icons right">save</i>Salvar</a>
+                <button class="waves-effect waves-light btn blue" [disabled]="!form.valid">
+                    <i class="material-icons right">
+                        save</i>Salvar
+                </button>
             </div>
             <div class="input-field col s4">
-                <a  routerLink="/evalution" class="waves-effect waves-light btn blue"><i class="material-icons right">cancel</i>Cancelar</a>
+                <button class="waves-effect waves-light btn grey lighten-1" (click)="onClearForm" >
+                    <i class="material-icons right">refresh</i>Limpar
+                </button>
             </div>
         </div>    
     

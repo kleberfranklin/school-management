@@ -1,5 +1,5 @@
-import { userService } from './user.service';
-import { Shared } from '../../util/shared';
+import { userService } from '../../../services/user.service';
+import { Shared } from '../../../util/shared';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { User } from '../../../model/user';
 import { NgForm } from '@angular/forms';
@@ -40,7 +40,7 @@ export class UserRegistrationComponent implements OnInit  {
 
     this.users = this.userService.getUsers();
 
-    this.userService.notifyTotalUsers();
+    
   }
 
  

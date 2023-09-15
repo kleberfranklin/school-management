@@ -15,6 +15,7 @@ import { ClassSchedulesComponent } from './components/page/class-schedules/class
 import { ClassRegistrationComponent } from './components/page/class-registration/class-registration.component';
 import { UserComponent } from './components/page/user/user.component';
 import { UserRegistrationComponent } from './components/page/user-registration/user-registration.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { UserRegistrationComponent } from './components/page/user-registration/u
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
