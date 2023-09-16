@@ -5,88 +5,88 @@
       </div>  
     </div>
     <hr/>
-    <!-- <div class="row">
-      <div class="col s2 ">
-        <a  routerLink="../class-registration" class="waves-effect waves-light btn blue">Segunda-feira</a>
+    <div class="row">
+      <div class="col s11 offset-s1">
+      <div class="input-field col s2">
+          <a class="btn blue" [routerLink]="['/class-registration']" [queryParams]="{ ano: '5º Ano - Ensino Fundamental I'}" >
+            <i class="material-icons right">add_circle_outline</i>
+              5º ano
+          </a>
+     </div>
+     <div class="input-field col s2">
+          <a class="btn blue" [routerLink]="['/class-registration']" [queryParams]="{ ano: '6º Ano - Ensino Fundamental II'}" >
+            <i class="material-icons right">add_circle_outline</i>6º ano
+          </a>
+     </div>
+      <div class="input-field col s2">
+        <a class="btn blue" [routerLink]="['/class-registration']" [queryParams]="{ ano: '7º Ano - Ensino Fundamental II'}" >
+          <i class="material-icons right">add_circle_outline</i>
+            7º ano
+        </a>
       </div>
-      <div class="col s2 ">
-        <a  routerLink="../class-registration" class="waves-effect waves-light btn blue">Terça-feira</a>
+      <div class="input-field col s2">
+        <a class="btn blue" [routerLink]="['/class-registration']" [queryParams]="{ ano: '8º Ano - Ensino Fundamental II'}" >
+          <i class="material-icons right">add_circle_outline</i>
+            8º ano
+        </a>
       </div>
-      <div class="col s2 ">
-        <a  routerLink="../class-registration" class="waves-effect waves-light btn blue">Quarta-feira</a>
+      <div class="input-field col s2">
+        <a class="btn blue" [routerLink]="['/class-registration']" [queryParams]="{ ano: '9º Ano - Ensino Fundamental II'}" >
+          <i class="material-icons right">add_circle_outline</i>
+            9º ano
+        </a>
       </div>
-      <div class="col s2 ">
-        <a  routerLink="../class-registration" class="waves-effect waves-light btn blue">Quinta-feira</a>
       </div>
-      <div class="col s2 ">
-        <a  routerLink="../class-registration" class="waves-effect waves-light btn blue">Sexta-feira</a>
-      </div>  
-  </div> -->
+  </div>
+
+
+    <div class="row">
+      <div class="col s10 offset-s2">
+      <label>
+        <input name="diaSemana" type="radio" value="Segunda-feira" checked="checked" (click)="onSelectWeek($event, 'Segunda-feira')"  required/>
+        <span style="padding-left: 30px; font-size: x-large; font-weight:bold">Segunda-feira</span>
+    </label>
+    <label>
+        <input name="diaSemana" type="radio" value="Terça-feira" (click)="onSelectWeek($event, 'Terça-feira')" />
+        <span style="padding-left: 30px; font-size: x-large; font-weight:bold"> Terça-feira</span>
+    </label>
+    <label>
+        <input name="diaSemana" type="radio" value="Quarta-feira" (click)="onSelectWeek($event, 'Quarta-feira')" />
+        <span style="padding-left: 30px; font-size: x-large; font-weight:bold" >Quarta-feira</span>
+    </label>
+    <label>
+        <input name="diaSemana" type="radio" value="Quinta-feira" (click)="onSelectWeek($event, 'Quinta-feira')"/>
+        <span style="padding-left: 30px; font-size: x-large; font-weight:bold">Quinta-feira</span>
+    </label>
+    <label>
+        <input name="diaSemana" type="radio" value="Sexta-feira" (click)="onSelectWeek($event, 'Sexta-feira')"/>
+        <span style="padding-left: 30px; font-size: x-large; font-weight:bold">Sexta-feira</span>
+    </label>  
+      </div>
+  </div>
   
       <div class="row">
         <div class="col s12" >
           <table class="highlight centered responsive-table">
             <thead>
               <tr>
-                <th>Horários</th>
-                <th colspan="4">Matérias</th>
+                <th class="year-of-teaching">Horários</th>
+                <th class="year-of-teaching">Ensino</th>
+                <th class="year-of-teaching">Matéria</th>
+                <th class="year-of-teaching">Professor(a)</th>
               </tr>
             </thead>
     
             <tbody>
-              <tr>
-                <td class="year-of-teaching">-</td>
-                <td class="year-of-teaching"><a [routerLink]="['/class-registration']" [queryParams]="{ id: '5'}" >5º ano</a></td>
-                <td class="year-of-teaching"><a [routerLink]="['/class-registration']" [queryParams]="{ id: '6'}" >6º ano</a></td>
-                <td class="year-of-teaching"><a [routerLink]="['/class-registration']" [queryParams]="{ id: '7'}" >7º ano</a></td>
-                <td class="year-of-teaching"><a [routerLink]="['/class-registration']" [queryParams]="{ id: '8'}" >8º ano</a></td>
-                <td class="year-of-teaching"><a [routerLink]="['/class-registration']" [queryParams]="{ id: '9'}" >9º ano</a></td>
-            </tr>
-              <tr>
-                  <td>07h15min as 08h05min</td>
-                  <td>Matemática Prof. Camilo</td>
-                  <td>Biologia Prof. Maria</td>
-                  <td>História Prof. Marcos</td>
-                  <td>Quimica Prof. Jose</td>
-                  <td>Inglês Prof. Olivia</td>                  
-                  <td><i class="material-icons">delete</i></td>
+              <tr *ngFor="let c of listClasseSchedules">
+                  <td>{{c.horarioInicial}} as {{c.horarioFinal}}</td>
+                  <td>{{c.ensino}}</td>
+                  <td>{{c.materia}}</td>
+                  <td>{{c.professor}}</td>  
+                  <!-- <td><a class="btn-floating waves-effect waves-light blue" [routerLink]="['/class-registration']" [queryParams]="{ id: c.id}"><i class="material-icons">edit</i></a></td>-->
+                  <td><a class="btn-floating waves-effect waves-light blue" (click)="onClickItem(c)" ><i class="material-icons">edit</i></a></td>                
+                  <td><a class="btn-floating waves-effect waves-light blue" (click)="onDelete(c)"><i class="material-icons">delete</i></a></td>
               </tr>
-              <tr>
-                <td>08h05min as 08h55min</td>
-                <td>Matemática Prof. Camilo</td>
-                <td>Biologia Prof. Maria</td>
-                <td>História Prof. Marcos</td>
-                <td>Quimica Prof. Jose</td>
-                <td>Inglês Prof. Olivia</td>
-                <td><i class="material-icons">delete</i></td>
-              </tr>
-              <tr>
-                  <td>08h55min as 09h45min</td>
-                  <td>Matemática Prof. Camilo</td>
-                  <td>Biologia Prof. Maria</td>
-                  <td>História Prof. Marcos</td>
-                  <td>Quimica Prof. Jose</td>
-                  <td>Inglês Prof. Olivia</td>                  
-                  <td><i class="material-icons">delete</i></td>
-              </tr>
-              <tr>
-                  <td>09h45min as 10h35min</td>
-                  <td>Matemática Prof. Camilo</td>
-                  <td>Biologia Prof. Maria</td>
-                  <td>História Prof. Marcos</td>
-                  <td>Quimica Prof. Jose</td>
-                  <td>Inglês Prof. Olivia</td>
-                  <td><i class="material-icons">delete</i></td>
-                </tr>               
-                <tr>
-                  <td> 10h55min as 11h45min</td>
-                  <td>Matemática Prof. Camilo</td>
-                  <td>Biologia Prof. Maria</td>
-                  <td>História Prof. Marcos</td>
-                  <td>Quimica Prof. Jose</td>
-                  <td>Inglês Prof. Olivia</td>
-                  <td><i class="material-icons">delete</i></td>
-                </tr>
             </tbody>
           </table>
   

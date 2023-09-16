@@ -8,17 +8,19 @@
   <div class="row">
     <div class="col s1 ">
       <a routerLink="../registration-evaluation" class="btn-floating waves-effect waves-light blue" ><i class="material-icons">add</i></a>
-    </div>
-
-    <div class="col s1 offset-s10">
+   </div>
+   <div class="col s1">
       <button class="waves-effect waves-light btn blue" (click)="this.onUpdateDate()"><i class="material-icons">timer</i></button>
+  </div>
+  <div>
+    
   </div>
     
 </div>
 
     <div class="row">
       <div class="col s12" >
-        <table class="highlight centered responsive-table">
+        <table class="centered responsive-table">
           <thead>
             <tr>
               <th data-field="td-date">Data</th>
@@ -31,46 +33,16 @@
           </thead>
   
           <tbody >
-            <tr>
-              <td>21/08</td>
-                <td>Segunda</td>
-                <td>Ciência</td>
-                <td>Paulo</td>
-                <td>Avliação Processual</td>
-                <td>Estudar pelo livro do 1º semestre: Capítulo 1 - Misturas do cotidiano, páginas 8, 10, 16.</td>
-                <td><i class="material-icons">edit</i></td>
-                <td><i class="material-icons">delete</i></td>
+            <tr *ngFor="let e of lsEvaluations">
+                <td>{{e.data | date : 'dd/MMM'}}</td>
+                <td>{{e.data | date : 'EEEE'  | titlecase  }}</td>
+                <td>{{e.componenteCuricular | uppercase}}</td>
+                <td>{{e.professor | titlecase }}</td>
+                <td>{{e.tipoAvaliacao}}</td>
+                <td>{{e.conteudoEtapas}}</td>
+                <td><a class="btn-floating waves-effect waves-light blue" [routerLink]="['/registration-evaluation']" [queryParams]="{ id: e.id }"><i class="material-icons">edit</i></a></td>
+                <td><a class="btn-floating waves-effect waves-light blue" (click)="this.onDelete(e)"> <i class="material-icons">delete</i></a></td>
             </tr>
-            <tr>
-                <td>21/08</td>
-                <td>Segunda</td>
-                <td>Ciência</td>
-                <td>Paulo</td>
-                <td>Avliação Processual</td>
-                <td>Estudar pelo livro do 1º semestre: Capítulo 1 - Misturas do cotidiano, páginas 8, 10, 16.</td>
-                <td> <i class="material-icons">edit</i></td>
-                <td><i class="material-icons">delete</i></td>
-              </tr>
-              <tr>
-                <td>21/08</td>
-                <td>Segunda</td>
-                <td>Ciência</td>
-                <td>Paulo</td>
-                <td>Avliação Processual</td>
-                <td>Estudar pelo livro do 1º semestre: Capítulo 1 - Misturas do cotidiano, páginas 8, 10, 16.</td>
-                <td> <i class="material-icons">edit</i></td>
-                <td><i class="material-icons">delete</i></td>
-              </tr>
-              <tr>
-                <td>21/08</td>
-                <td>Segunda</td>
-                <td>Ciência</td>
-                <td>Paulo</td>
-                <td>Avliação Processual</td>
-                <td>Estudar pelo livro do 1º semestre: Capítulo 1 - Misturas do cotidiano, páginas 8, 10, 16.</td>
-                <td> <i class="material-icons">edit</i></td>
-                <td><i class="material-icons">delete</i></td>
-              </tr>
           </tbody>
         </table>
 

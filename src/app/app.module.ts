@@ -1,3 +1,4 @@
+import { LOCALE_ID } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -16,6 +17,11 @@ import { ClassRegistrationComponent } from './components/page/class-registration
 import { UserComponent } from './components/page/user/user.component';
 import { UserRegistrationComponent } from './components/page/user-registration/user-registration.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AbbreviatedDatePipe } from './pipes/abbreviated-date.pipe';
+import ptBr from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(ptBr);
 
 @NgModule({
   declarations: [
@@ -31,6 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     ClassRegistrationComponent,
     UserComponent,
     UserRegistrationComponent,
+    AbbreviatedDatePipe,
     
   ],
   imports: [
@@ -39,7 +46,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{ provide: LOCALE_ID, useValue: 'pt-BR' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

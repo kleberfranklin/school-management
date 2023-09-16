@@ -1,10 +1,21 @@
 th {
     text-align: center;
-    font-size: xx-large;
-}
-
-.year-of-teaching{
-    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: x-large;
 }
+
+[type="radio"]:checked + span:after,
+[type="radio"].with-gap:checked + span:before,
+[type="radio"].with-gap:checked + span:after {
+   border: 2px solid #2196f3;
+}
+ 
+
+[type="radio"]:checked + span:after, 
+[type="radio"].with-gap:checked + span:after {
+  background-color: #2196f3;
+}
+
+
+
+

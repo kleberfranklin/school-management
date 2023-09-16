@@ -1,8 +1,17 @@
 export class ClasseSchedules{
     id!: string;
-    horario?: string;
+    horarioInicial?: string;
+    horarioFinal?: string;
     diaSemana?: string;
     materia?: string;
     professor?: string;
-    ensino?: string;
+    ensino!: string;
+    
+    constructor(ensino: string){
+        this.ensino = ensino;
+    }
+    
+
+
+
 }

@@ -23,65 +23,103 @@
   ],
   "evaluations": [
     {
-      "data": "12/06",
-      "diaSemana": "Segunda-feira",
-      "componenteCuricular": "Ciência",
-      "professor": "José",
-      "tipoAvaliacao": "Processual",
-      "conteudoEtapas": "studar pelo livro do 1º semestre: Capítulo 1 - Misturas do cotidiano, páginas 8, 10, 16."
+      "data": "2023-09-17",
+      "componenteCuricular": "Frameworks Web",
+      "conteudoEtapas": "Esta atividade consiste na entrega do projeto final da disciplina, ou seja, a entrega de um projeto de uma aplicação web desenvolvido com o uso do framework Angular conforme o tema e o escopo do projeto  definidos pelo aluno no início da disciplina. ",
+      "professor": "Prof. Dr. Roni Fabio Banaszewski",
+      "tipoAvaliacao": "Build e deploy da aplicação.",
+      "id": 1
     },
     {
-      "id": "10",
-      "data": "14/06",
-      "diaSemana": "Quinta-feira",
-      "componenteCuricular": "Matématica",
-      "professor": "Tiago",
-      "tipoAvaliacao": "Multipla escolha",
-      "conteudoEtapas": "Livro paginas 15, 19, 22 a 26"
-    },
-    {
-      "data": "14/09",
-      "diaSemana": "Quinta-feira",
-      "componenteCuricular": "Angular",
-      "professor": "Roni",
-      "tipoAvaliacao": "entrega no gitHup",
-      "conteudoEtapas": "Depoly do projeto",
-      "id": "kFWKchT"
-    },
-    {
-      "id": "20",
-      "data": "15/06",
-      "diaSemana": "Quinta-feira",
-      "componenteCuricular": "Angulo",
-      "professor": "Roni",
-      "tipoAvaliacao": "Deploy",
-      "conteudoEtapas": "Entrega do projeto final"
-    },
-    {
-      "data": "28/09",
-      "diaSemana": "Segunda-feira",
-      "componenteCuricular": "fasdf",
-      "professor": "Caleber",
-      "tipoAvaliacao": "Mutiplo Escolha",
-      "conteudoEtapas": "teste",
-      "id": "FmyWbkE"
+      "data": "2023-09-17",
+      "componenteCuricular": "Integração Contínua DevOps",
+      "professor": "Gabriel Costa Silva",
+      "tipoAvaliacao": "10 questões e apenas uma chance de envio das respostas",
+      "conteudoEtapas": "Essa avaliação segue o mesmo modelo das avaliações realizadas durante a disciplina",
+      "id": 2
     }
   ],
   "classeSchedules": [
     {
-      "horario": "07h15min as 08h05min",
+      "ensino": "5º Ano - Ensino Fundamental I",
+      "horarioInicial": "07:15",
+      "horarioFinal": "08:05",
       "diaSemana": "Segunda-feira",
-      "materia": "Matématica",
-      "professor": "Paulo",
-      "ensino": "5º"
+      "materia": "Matemática",
+      "professor": "Camilo",
+      "id": "O3TInCj"
     },
     {
-      "id": "10",
-      "horario": "08h05min as 08h55min",
+      "ensino": "5º Ano - Ensino Fundamental I",
+      "horarioInicial": "08:05",
+      "horarioFinal": "08:55",
       "diaSemana": "Segunda-feira",
-      "materia": "Java I",
-      "professor": "Alessandro",
-      "ensino": "9º"
+      "materia": "Biologia",
+      "professor": "Maria",
+      "id": "F_lwXJO"
+    },
+    {
+      "ensino": "5º Ano - Ensino Fundamental I",
+      "horarioInicial": "08:55",
+      "horarioFinal": "09:45",
+      "diaSemana": "Segunda-feira",
+      "materia": "História",
+      "professor": "Marcos",
+      "id": "iLBxrNa"
+    },
+    {
+      "ensino": "5º Ano - Ensino Fundamental I",
+      "horarioInicial": "09:45",
+      "horarioFinal": "10:35",
+      "diaSemana": "Segunda-feira",
+      "materia": "Portugues",
+      "professor": "Rafael",
+      "id": "hcQAZeR"
+    },
+    {
+      "ensino": "5º Ano - Ensino Fundamental I",
+      "horarioInicial": "10:55",
+      "horarioFinal": "11:45",
+      "diaSemana": "Segunda-feira",
+      "materia": "Química",
+      "professor": "José",
+      "id": "aB5eDIY"
+    },
+    {
+      "ensino": "5º Ano - Ensino Fundamental I",
+      "horarioInicial": "11:45",
+      "horarioFinal": "12:35",
+      "diaSemana": "Segunda-feira",
+      "materia": "Inglês",
+      "professor": "Olivia",
+      "id": "D_Y8zey"
+    },
+    {
+      "ensino": "5º Ano - Ensino Fundamental I",
+      "horarioInicial": "12:35",
+      "horarioFinal": "13:25",
+      "diaSemana": "Segunda-feira",
+      "materia": "Matemática",
+      "professor": "Camilo",
+      "id": "WN1SQYr"
+    },
+    {
+      "ensino": "6º Ano - Ensino Fundamental II",
+      "horarioInicial": "07:15",
+      "horarioFinal": "08:05",
+      "diaSemana": "Terça-feira",
+      "materia": "DevOps",
+      "professor": "Gabriel Costa Silva",
+      "id": "pSBvgfQ"
+    },
+    {
+      "ensino": "9º Ano - Ensino Fundamental II",
+      "horarioInicial": "07:15",
+      "horarioFinal": "08:05",
+      "diaSemana": "Quarta-feira",
+      "materia": "Frameworks Web",
+      "professor": " Prof. Dr. Roni Fabio Banaszewski",
+      "id": "3M_IEog"
     }
   ]
 }

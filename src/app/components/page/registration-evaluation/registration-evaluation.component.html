@@ -1,40 +1,28 @@
 <div class="row">
     
-    <form class="col s6 offset-s4" #form="ngForm" (submit)="onSubmit()" >
-
+    <form class="col s6 offset-s3" #form="ngForm" (submit)="onSubmit()" >
         <div class="row">
-            <div class="input-field col s4">
-                <input 
-                    placeholder="dd/mm" 
-                    id="data" 
-                    name="data"
-                    type="text" 
-                    class="validate"
-                    [(ngModel)]="this.evaluation.data"
-                    maxlength="5"
-                    #data="ngModel"
-                    required />
-                <label class="active" for="data">Data</label>
-                <div class="red-text" [hidden]="data.valid || data.untouched">
-                    Por favor, informe a data.
+            <div class="col s6 offset-s3">
+                <div class="card-panel ">
+                    <span class="blue-text text-darken-10"><h5>{{this.title}} de Avaliação</h5></span>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field col s4">
                 <input 
-                    placeholder="diaSemana" 
-                    id="diaSemana"
-                    name="diaSemana"
-                    type="text" 
+                    placeholder="dd/mm/aaaa" 
+                    id="data" 
+                    name="data"
+                    type="date" 
                     class="validate"
-                    [(ngModel)]="this.evaluation.diaSemana"
-                    #diaSemana="ngModel"
-                  
+                    [(ngModel)]="this.evaluation.data"
+                    maxlength="10"
+                    #data="ngModel"
                     required />
-                <label class="active" for="diaSemana">Dia Semana</label>
-                <div class="red-text" [hidden]="diaSemana.valid || diaSemana.untouched">
-                    Por favor, informe o dia da Semana.
+                <label class="active" for="data">Data *</label>
+                <div class="red-text" [hidden]="data.valid || data.untouched">
+                    Por favor, informe a data.
                 </div>
             </div>
         </div>
@@ -48,7 +36,7 @@
                     [(ngModel)]="this.evaluation.componenteCuricular"
                     #componenteCuricular="ngModel"
                     required />
-                <label class="active" for="componenteCuricular">Componente Curicular</label>
+                <label class="active" for="componenteCuricular">Componente Curicular *</label>
                 <div class="red-text" [hidden]="componenteCuricular.valid || componenteCuricular.untouched">
                     Por favor, informe o Componente Curicular.
                 </div>
@@ -65,7 +53,7 @@
                     [(ngModel)]="this.evaluation.professor"
                     #professor="ngModel"
                     required/>
-                <label class="active" for="professor">Professor(a) Responsável</label>
+                <label class="active" for="professor">Professor(a) Responsável *</label>
                 <div class="red-text" [hidden]="professor.valid || professor.untouched">
                     Por favor, informe o nome do professor(a).
                 </div>
@@ -82,7 +70,7 @@
                     [(ngModel)]="this.evaluation.tipoAvaliacao"
                     #tipoAvaliacao="ngModel"
                     required/>
-                <label class="active" for="disabled">Tipo de Avaliação</label>
+                <label class="active" for="disabled">Tipo de Avaliação *</label>
                  <div class="red-text" [hidden]="tipoAvaliacao.valid || tipoAvaliacao.untouched">
                     Por favor, informe o tipo de avaliação.
                 </div>
@@ -98,7 +86,7 @@
                     [(ngModel)]="this.evaluation.conteudoEtapas"
                     #conteudo="ngModel"
                     required></textarea>
-                <label class="active" for="textarea1">Contéudos e etapas</label>
+                <label class="active" for="textarea1">Contéudos e etapas *</label>
                 <div class="red-text" [hidden]="conteudo.valid || conteudo.untouched">
                     Por favor, informe os Contéudos e as etapas.
                 </div>
@@ -111,14 +99,6 @@
                         save</i>Salvar
                 </button>
             </div>
-            <div class="input-field col s4">
-                <button class="waves-effect waves-light btn grey lighten-1" (click)="onClearForm" >
-                    <i class="material-icons right">refresh</i>Limpar
-                </button>
-            </div>
-        </div>    
-    
-       
-    
+        </div>   
     </form>
   </div>
