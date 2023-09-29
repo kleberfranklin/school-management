@@ -21,11 +21,8 @@ export class NavbarComponent implements OnInit {
   constructor(private router: Router, private loginService: LoginService) {
     this.subscription = this.loginService.asObservable().subscribe((value) => {
       this.isLogin = value;
-      console.log('returno isLogin: ' + this.isLogin);
-      
       this.user = this.loginService.getUser()
       console.log('email: ' + this.user.email);
-      console.log('isAdmin: ' + this.user.isAdmin);
 
     });
      

@@ -11,6 +11,15 @@ https://www.figma.com/proto/3XCZx4NuwHCL5IInt8emYy/school-management?type=design
 ## GitHub Pages
 https://kleberfranklin.github.io/school-management/
 
+## Vídeos de Apresentação
+https://www.loom.com/share/4ad40b133f8f485faa3e1e47167434ce?sid=026c516d-117d-4b6d-90c6-9d0fcfa130e3
+
+https://www.loom.com/share/f20fe133144848878d3836b95fc16590?sid=4fe2d434-f53a-441c-afe8-8378d29f3792
+
+https://www.loom.com/share/0d2cc17b43674c0ba925aedf19c4043d?sid=db5f912d-ca20-4459-9192-876b725f9011
+
+https://www.loom.com/share/c288dd14692448839fc3cbf97ed795a1?sid=b6c95db1-4a6b-458c-887d-dad6344fa830
+
 # 📖 Tópicos/Checklist
 
 - [x] Criar o repositório no GitHub com a estrutura do Gitflow, ou seja, branches main e develop. 
