@@ -1,29 +1,7 @@
 {
-  "users": [
-    {
-      "name": "Kleber Franklin",
-      "email": "kleberfranklin@alunos.utfpr.edu.br",
-      "password": "123852",
-      "isAdmin": true
-    },
-    {
-      "id": "02",
-      "name": "Maria Fatima",
-      "email": "fatima@alunos.utfpr.edu.br",
-      "password": "654321",
-      "isAdmin": false
-    },
-    {
-      "name": "Paulo Roberto",
-      "email": "beto@alunos.utfpr.edu.br",
-      "password": "654321",
-      "isAdmin": true,
-      "id": "QBB6TPl"
-    }
-  ],
   "evaluations": [
     {
-      "data": "2023-09-17",
+      "data": "2023-09-28",
       "componenteCuricular": "Frameworks Web",
       "conteudoEtapas": "Esta atividade consiste na entrega do projeto final da disciplina, ou seja, a entrega de um projeto de uma aplicação web desenvolvido com o uso do framework Angular conforme o tema e o escopo do projeto  definidos pelo aluno no início da disciplina. ",
       "professor": "Prof. Dr. Roni Fabio Banaszewski",
@@ -31,12 +9,28 @@
       "id": 1
     },
     {
-      "data": "2023-09-17",
+      "data": "2023-09-28",
       "componenteCuricular": "Integração Contínua DevOps",
       "professor": "Gabriel Costa Silva",
       "tipoAvaliacao": "10 questões e apenas uma chance de envio das respostas",
       "conteudoEtapas": "Essa avaliação segue o mesmo modelo das avaliações realizadas durante a disciplina",
       "id": 2
+    },
+    {
+      "componenteCuricular": "Teste de Software",
+      "professor": "Prof. Me. André L. S. Domingues",
+      "data": "2023-06-29",
+      "tipoAvaliacao": "Execução",
+      "conteudoEtapas": "Avaliação da Disciplina - TestSoft",
+      "id": 3
+    },
+    {
+      "componenteCuricular": "Sistemas de Banco de Dados",
+      "data": "2022-12-01",
+      "professor": "Prof. Esp. Hugo Baker Goveia",
+      "tipoAvaliacao": "Questionário",
+      "conteudoEtapas": " conteúdo de leitura, videoaula e avaliações.",
+      "id": 4
     }
   ],
   "classeSchedules": [

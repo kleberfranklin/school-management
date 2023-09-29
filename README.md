@@ -8,6 +8,9 @@ Esta aplicação terá as funcionalidade básicas para gerenciar um calendário 
 ## Protótipo
 https://www.figma.com/proto/3XCZx4NuwHCL5IInt8emYy/school-management?type=design&node-id=6-39&t=SrklKsFmBzioxjhX-0&scaling=min-zoom&page-id=1%3A5&starting-point-node-id=6%3A39
 
+## GitHub Pages
+https://kleberfranklin.github.io/school-management/
+
 # 📖 Tópicos/Checklist
 
 - [x] Criar o repositório no GitHub com a estrutura do Gitflow, ou seja, branches main e develop. 
@@ -27,7 +30,7 @@ https://www.figma.com/proto/3XCZx4NuwHCL5IInt8emYy/school-management?type=design
 - [x] Apresentar uma lista de dados com a diretiva estrutural ngFor.
 - [x] Usar a diretiva ngIf. 
 - [x] Formatar a apresentação de dados com Pipes.
-- [] Build e deploy da aplicação. 
+- [x] Build e deploy da aplicação. 
 
 ## Manual de execução
 - Clonar o repositório com `git clone`

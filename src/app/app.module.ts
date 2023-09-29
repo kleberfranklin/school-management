@@ -17,7 +17,7 @@ import { ClassRegistrationComponent } from './components/page/class-registration
 import { UserComponent } from './components/page/user/user.component';
 import { UserRegistrationComponent } from './components/page/user-registration/user-registration.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AbbreviatedDatePipe } from './pipes/abbreviated-date.pipe';
+
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 
@@ -37,7 +37,7 @@ registerLocaleData(ptBr);
     ClassRegistrationComponent,
     UserComponent,
     UserRegistrationComponent,
-    AbbreviatedDatePipe,
+    
     
   ],
   imports: [

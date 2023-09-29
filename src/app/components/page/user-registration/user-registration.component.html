@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col s4 offset-s4">
             <div class="card-panel ">
-                <span class="blue-text text-darken-10"><h5> Cadastro de Usuários</h5></span>
+                <h5 class="blue-text text-darken-10"> {{title}} de Usuários</h5>
             </div>
         </div>
     </div>      
@@ -23,11 +23,6 @@
                 <div class="red-text" [hidden]="name.valid || name.untouched">
                     Por favor, informe o seu nome completo.
                 </div>
-                <span
-                    class="helper-text"
-                    data-error="O campo é inválido"
-                    data-success="Ok!"
-                ></span>
             </div>
       
             <div class="input-field col s12">
@@ -95,11 +90,7 @@
             <div class="input-field col s6">
                 <button  class="waves-effect waves-light btn blue" [disabled]="!form.valid" >
                     <i class="material-icons right">save</i>Salvar</button>
-            </div>  
-            <div class="input-field col s3 offset-s2">
-                <button routerLink="/user" class="waves-effect waves-light btn blue">
-                    <i class="material-icons left">arrow_back</i>Voltar</button>
-            </div>           
+            </div>            
         </div>
     </form>
 </div>

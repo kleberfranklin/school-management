@@ -1,8 +1,9 @@
-import { userService } from '../../../services/user.service';
+import { UserService } from '../../../services/user.service';
 import { Shared } from '../../../util/shared';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { User } from '../../../model/user';
 import { NgForm } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-registration',
@@ -14,34 +15,50 @@ export class UserRegistrationComponent implements OnInit  {
 
   user!: User;
   users!: User[];
+  isStorage!: boolean;
+  email!: string;
+  title!: string;
   
   userConfirmPassword: string = '';
   isSubmitted!: boolean;
 
-  constructor(private userService: userService) {}
+  constructor(
+    private userService: UserService,
+    private route: ActivatedRoute, 
+    private router: Router) {}
 
   ngOnInit(): void {
-    Shared.initializeWebStorage();
-    this.user = new User('', '');
-    this.users = this.userService.getUsers();
+      Shared.initializeWebStorage();
+      this.route.queryParams.subscribe( (params) => {
+      this.email = params['email'];      
+     });
+            
+    if(this.email){
+      this.user = this.userService.getUserEmail(this.email);
+      this.title = 'Atualizar'
+     console.log("Usuer Atualizar: " + JSON.stringify(this.user));
+    }else{
+      this.user = new User('', '');
+      this.title = 'Cadastro'
+    }    
+
   }
 
   onSubmit() {
-    this.isSubmitted = true;
+      this.isStorage = this.userService.isExistStorage(this.user.email);   
 
-    if (!this.userService.isExist(this.user.email)) {
-      this.userService.save(this.user);
-    } else {
-      this.userService.update(this.user);
-    }
- 
+      if (this.isStorage) {  
+        this.userService.update(this.user);
+        M.toast({ html: `Atualização realizada om sucesso!`, displayLength:1500, classes: 'green' }); 
+      }else{
+        this.userService.save(this.user);
+        M.toast({ html: `Cadastrador realizado com sucesso!`, displayLength:1500, classes: 'green' });
+      }   
+    
     this.form.reset();
     this.user = new User('', '');
-
-    this.users = this.userService.getUsers();
-
-    
   }
+
 
  
 }

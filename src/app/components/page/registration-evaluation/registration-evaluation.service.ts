@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Evaluation } from 'src/app/model/evaluation';
 import { Injectable } from '@angular/core';
-import { catchError, lastValueFrom } from 'rxjs';
+import { lastValueFrom } from 'rxjs';
 
 @Injectable()
 export class RegistrationEvaluationService {

@@ -3,37 +3,42 @@
         <a routerLink="../user-registration" class="btn-floating waves-effect waves-light blue" ><i class="material-icons">contacts</i></a>
     </h3>
   <hr/>        
-    <table class="highlight" *ngIf="users && users!.length > 0">
+    <table class="highlight" *ngIf="lsUsers && lsUsers!.length > 0">
     <thead>
         <tr>
-        <th>Nome Completo</th>
-        <th>email</th>
-        <th>Administrador</th>
-        <th></th>
+            <th>Nome Completo</th>
+            <th>email</th>
+            <th>Administrador</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let u of users">
+        <tr *ngFor="let u of lsUsers">
         <td>{{ u.name | titlecase }}</td>
         <td>{{ u.email | lowercase }}</td>
-        <td> {{ u!.isAdmin }}</td>
+        <td>
+            <label>
+                <input  type="checkbox" checked="checked" disabled="disabled" *ngIf="u.isAdmin"  />
+                <span></span>
+            </label>
+        </td>
         <td class="right">
-            <a (click)="onEdit(u)"><i class="material-icons my-icon-size" >edit</i></a>
+            <a class="btn-floating waves-effect waves-light blue" [routerLink]="['/user-registration']" [queryParams]="{ email: u.email }"><i class="material-icons">edit</i></a>
         </td>
         <td>
-            <a (click)="onDelete(u.email)"><i class="material-icons my-icon-size" >delete</i></a>
+            <a class="btn-floating waves-effect waves-light blue" (click)="onDelete(u)"> <i class="material-icons">delete</i></a>
         </td>
         </tr>
     </tbody>
     </table>
 
-    <div *ngIf="!users || users!.length == 0">
+    <div *ngIf="!lsUsers || lsUsers!.length == 0">
     <div class="row">
         <div class="center-align">
             <i class="col s12 material-icons large">do_not_disturb</i>
-            <span class="col s12 flow-text">
+            <div class="col s12 flow-text">
                Não usuários cadastrados!
-            </span>
+            </div>
         </div>
     </div>
     </div>

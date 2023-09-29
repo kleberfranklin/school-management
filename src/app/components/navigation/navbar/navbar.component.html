@@ -4,13 +4,13 @@
       <a routerLink="/" class="brand-logo">
         <img class="logo-img" src="assets/resources/imgs/logo.png" />
       </a>
-      <span class="text-top">School Management</span>
+      <a class="text-top">School Management</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger" ><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down" *ngIf="this.isLogin">
         <li><a routerLink="evalution" class="link-text" >Avaliações</a></li>
         <li><a routerLink="class-schedules" class="link-text" >Horários das Aulas</a></li>
         <li><a routerLink="user" class="link-text" *ngIf="this.user.isAdmin" >Usuários</a></li>
-        <li><a class="link-text" >Logout</a></li>
+        <li><a class="link-text" (click)="onLogout()">Logout</a></li>
       </ul>
     </div>
     

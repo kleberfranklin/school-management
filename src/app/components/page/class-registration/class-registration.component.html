@@ -4,9 +4,7 @@
         <div class="row">
             <div class="col s6 offset-s3">
                 <div class="card-panel ">
-                    <span class="blue-text text-darken-10">
-                        <h5>{{this.fundamental}}</h5>
-                    </span>
+                        <h5 class="blue-text text-darken-10">{{this.fundamental}}</h5>    
                 </div>
             </div>
         </div>
@@ -48,23 +46,23 @@
             
             <label>
                 <input name="diaSemana" type="radio" value="Segunda-feira" #diaSemana="ngModel" [(ngModel)]="this.classeSchedules.diaSemana"  required/>
-                <span style="padding-left: 24px;">Segunda-feira</span>
+                <span>Segunda-feira</span>
             </label>
             <label>
                 <input name="diaSemana" type="radio" value="Terça-feira" #diaSemana="ngModel"  [(ngModel)]="this.classeSchedules.diaSemana" required/>
-                <span style="padding-left: 24px;">Terça-feira</span>
+                <span>Terça-feira</span>
             </label>
             <label>
                 <input name="diaSemana" type="radio" value="Quarta-feira" #diaSemana="ngModel"  [(ngModel)]="this.classeSchedules.diaSemana" required/>
-                <span style="padding-left: 24px;">Quarta-feira</span>
+                <span>Quarta-feira</span>
             </label>
             <label>
                 <input name="diaSemana" type="radio" value="Quinta-feira" #diaSemana="ngModel"  [(ngModel)]="this.classeSchedules.diaSemana" required/>
-                <span style="padding-left: 24px;">Quinta-feira</span>
+                <span>Quinta-feira</span>
             </label>
             <label>
                 <input name="diaSemana" type="radio" value="Sexta-feira" #diaSemana="ngModel"  [(ngModel)]="this.classeSchedules.diaSemana" required/>
-                <span style="padding-left: 24px;">Sexta-feira</span>
+                <span>Sexta-feira</span>
             </label>
             <div class="red-text" [hidden]="diaSemana.valid || diaSemana.untouched">
                 Por favor, selecione uma das opções.

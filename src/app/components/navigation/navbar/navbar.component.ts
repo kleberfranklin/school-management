@@ -49,4 +49,9 @@ export class NavbarComponent implements OnInit {
     console.log('destroy - land-page');
   }
 
+  onLogout() {
+    //this.loggedIn = false;
+    this.loginService.logout();
+  }
+
 }
