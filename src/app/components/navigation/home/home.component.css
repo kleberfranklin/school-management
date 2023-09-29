@@ -1,0 +1,28 @@
+.card-title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+
+.card-image{
+    text-align: center;
+    padding-top: 13%;
+    padding-bottom: 13%;
+    min-height: 500px;
+    margin-bottom: 50px;
+    /* background-image: url("/assets/resources/imgs/School-Management.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+      
+}
+
+.card-title{
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    
+}
+.card-content{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+}

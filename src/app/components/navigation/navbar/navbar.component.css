@@ -1,0 +1,26 @@
+.logo-img{
+    width: 16%;
+    box-shadow: #A4D4E3;
+}
+
+.link-text {
+    font-weight: bold;
+    color:#708090;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:x-large;
+    
+}
+
+.text-top{
+    color:#708090;
+    padding: 10px;
+    margin: 50px;
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.space-nav{
+    padding: 5px;
+    margin: 5px;
+}

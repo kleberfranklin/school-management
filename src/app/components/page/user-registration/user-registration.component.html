@@ -1,0 +1,96 @@
+<div class="row">
+    <div class="row">
+        <div class="col s4 offset-s4">
+            <div class="card-panel ">
+                <h5 class="blue-text text-darken-10"> {{title}} de Usuários</h5>
+            </div>
+        </div>
+    </div>      
+    <form class="col s4 offset-s4"  #form="ngForm" (submit)="onSubmit()">
+        <div class="row">
+            <div class="input-field col s12">
+                <input
+                    placeholder="Nome Completo"
+                    id="in-name"
+                    name="in-name"
+                    type="text"
+                    class="validate"
+                    [(ngModel)]="this.user.name"
+                    pattern="^(\s?[A-ZÀ-Ú][a-zà-ú]*)+(\s[a-zà-ú]*)?(\s[A-ZÀ-Ú][a-zà-ú]*)+"
+                    #name="ngModel"
+                    required />
+                <label class="active" for="in-name">Nome Completo *</label>
+                <div class="red-text" [hidden]="name.valid || name.untouched">
+                    Por favor, informe o seu nome completo.
+                </div>
+            </div>
+      
+            <div class="input-field col s12">
+                <input 
+                    placeholder="E-mail" 
+                    id="in-email"
+                    name="in-email"
+                    type="email" 
+                    class="validate"
+                    [(ngModel)]="this.user.email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                    #email="ngModel"
+                    required >
+                <label class="active" for="email">Email</label>
+                <div class="red-text" [hidden]="email.valid || email.untouched">
+                    Por favor, informe email valido.
+                </div>
+            </div>
+            
+            <div class="input-field col s6">
+                <input 
+                id="password" 
+                name="password"  
+                type="password"   
+                class="validate"
+                [(ngModel)]="this.user.password"
+                pattern="^[a-zA-Z0-9_@#\\&\\$]{6,18}$"
+                #password="ngModel"
+                required >
+                <label class="active" for="password">Senha</label>
+                <div class="red-text" [hidden]="password.valid || password.untouched">
+                    Por favor, nos informe a sua senha com pelo menos 6 caracteres!
+                </div>
+            </div>
+            <div class="input-field col s6">
+                <input 
+                id="confirmPassword" 
+                name="confirmPassword"  
+                type="password"   
+                class="validate" 
+                [(ngModel)]="this.userConfirmPassword"
+                #confirmPassword="ngModel"
+                pattern="{{ password.value }}"
+                required>
+                <label class="active" for="confirmPassword">Confirma senha</label>
+                <div class="red-text" [hidden]="confirmPassword.valid || confirmPassword.untouched">
+                    Por favor, repita a sua senha.
+                </div>
+            </div>
+            <div class="input-field col s12">
+                <p>
+                    <label>
+                        <input 
+                        id="in-admin"
+                        name="in-admin"
+                        type="checkbox"
+                        [(ngModel)]="this.user.isAdmin" 
+                        />
+                        <span>Administrador</span>
+                    </label>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <button  class="waves-effect waves-light btn blue" [disabled]="!form.valid" >
+                    <i class="material-icons right">save</i>Salvar</button>
+            </div>            
+        </div>
+    </form>
+</div>

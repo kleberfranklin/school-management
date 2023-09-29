@@ -1,0 +1,115 @@
+<div class="row">
+
+    <form class="col s6 offset-s3" #form="ngForm" (submit)="onSubmit()" >
+        <div class="row">
+            <div class="col s6 offset-s3">
+                <div class="card-panel ">
+                        <h5 class="blue-text text-darken-10">{{this.fundamental}}</h5>    
+                </div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="input-field col s3">
+                <input 
+                placeholder="Placeholder" 
+                id="horarioInicial" 
+                name="horarioInicial" 
+                type="time" 
+                class="validate"
+                [(ngModel)]="this.classeSchedules.horarioInicial"
+                #horarioInicial="ngModel"
+                required >
+                <label for="horarioInicial">Horário inicio *</label>
+                <div class="red-text" [hidden]="horarioInicial.valid || horarioInicial.untouched">
+                    Por favor, informe o horário.
+                </div>
+            </div>
+            
+            <div class="input-field col s3">
+                <input 
+                    id="horarioFinal" 
+                    name="horarioFinal" 
+                    type="time" 
+                    class="validate"
+                    [(ngModel)]="this.classeSchedules.horarioFinal"
+                    #horarioFinal="ngModel"
+                    required >
+                <label for="horarioFinal">Horário fim</label>
+                <div class="red-text" [hidden]="horarioFinal.valid || horarioFinal.untouched">
+                    Por favor, informe o horário.
+                </div>
+            </div>
+            
+        </div>
+        <div class="row">
+            
+            <label>
+                <input name="diaSemana" type="radio" value="Segunda-feira" #diaSemana="ngModel" [(ngModel)]="this.classeSchedules.diaSemana"  required/>
+                <span>Segunda-feira</span>
+            </label>
+            <label>
+                <input name="diaSemana" type="radio" value="Terça-feira" #diaSemana="ngModel"  [(ngModel)]="this.classeSchedules.diaSemana" required/>
+                <span>Terça-feira</span>
+            </label>
+            <label>
+                <input name="diaSemana" type="radio" value="Quarta-feira" #diaSemana="ngModel"  [(ngModel)]="this.classeSchedules.diaSemana" required/>
+                <span>Quarta-feira</span>
+            </label>
+            <label>
+                <input name="diaSemana" type="radio" value="Quinta-feira" #diaSemana="ngModel"  [(ngModel)]="this.classeSchedules.diaSemana" required/>
+                <span>Quinta-feira</span>
+            </label>
+            <label>
+                <input name="diaSemana" type="radio" value="Sexta-feira" #diaSemana="ngModel"  [(ngModel)]="this.classeSchedules.diaSemana" required/>
+                <span>Sexta-feira</span>
+            </label>
+            <div class="red-text" [hidden]="diaSemana.valid || diaSemana.untouched">
+                Por favor, selecione uma das opções.
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="input-field col s8">
+                <input 
+                    id="materia" 
+                    name="materia" 
+                    type="text" 
+                    class="validate"
+                    [(ngModel)]="this.classeSchedules.materia"
+                    #materia="ngModel"
+                    required>
+                <label class="active" for="materia">Matéria</label>
+                <div class="red-text" [hidden]="materia.valid || materia.untouched">
+                    Por favor, informe a matéria
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s8">
+                <input 
+                    id="professor" 
+                    name="professor" 
+                    type="text" 
+                    class="validate"
+                    [(ngModel)]="this.classeSchedules.professor"
+                    #professor="ngModel"
+                    required >
+                <label class="active"  for="professor">Professor(a)</label>
+                <div class="red-text" [hidden]="professor.valid || professor.untouched">
+                    Por favor, informe o nome do professor(a)
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s4">
+                <button class="waves-effect waves-light btn blue" [disabled]="!form.valid">
+                    <i class="material-icons right">
+                        save</i>Salvar
+                </button>
+            </div>
+        </div>       
+    </form>
+  </div>

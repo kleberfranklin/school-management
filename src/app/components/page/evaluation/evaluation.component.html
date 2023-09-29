@@ -1,0 +1,59 @@
+<div class="container contact">
+  <div class="row">
+     <div class="col s3 offset-s5">
+      <h3>Avaliações</h3>
+    </div>  
+  </div>
+  <hr/>
+  <div class="row">
+    <div class="col s1 ">
+      <a routerLink="../registration-evaluation" class="btn-floating waves-effect waves-light blue" ><i class="material-icons">add</i></a>
+   </div>
+   <div class="col s1">
+      <button class="waves-effect waves-light btn blue" (click)="this.onUpdateDate()"><i class="material-icons">timer</i></button>
+  </div>
+  <div>
+    
+  </div>
+    
+</div>
+
+    <div class="row">
+      <div class="col s12" >
+        <table class="centered responsive-table">
+          <thead>
+            <tr>
+              <th data-field="td-date">Data</th>
+              <th data-field="td-type">Dia Semana</th>
+              <th data-field="td-value">Componente Curicular</th>
+              <th data-field="td-tax">Professor(a) Responsável</th>
+              <th data-field="td-tax">Tipo de Avaliação</th>
+              <th data-field="td-tax">Contéudos e Etapas</th>
+            </tr>
+          </thead>
+  
+          <tbody >
+            <tr *ngFor="let e of lsEvaluations">
+                <td>{{e.data | date : 'dd/MMM'}}</td>
+                <td>{{e.data | date : 'EEEE'  | titlecase  }}</td>
+                <td>{{e.componenteCuricular | uppercase}}</td>
+                <td>{{e.professor | titlecase }}</td>
+                <td>{{e.tipoAvaliacao}}</td>
+                <td>{{e.conteudoEtapas}}</td>
+                <td><a class="btn-floating waves-effect waves-light blue" [routerLink]="['/registration-evaluation']" [queryParams]="{ id: e.id }"><i class="material-icons">edit</i></a></td>
+                <td><a class="btn-floating waves-effect waves-light blue" (click)="this.onDelete(e)"> <i class="material-icons">delete</i></a></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <app-panel
+      [update] = this.isUpdate
+      (evalutionEvent)="this.onReturnUpdate($event)"
+      ></app-panel>
+    </div>
+</div>
+  

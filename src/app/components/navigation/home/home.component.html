@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col s4 offset-s4">
+      <div class="card" >
+        <div class="card-image" [ngStyle]="this.getBackgroundImage()" >
+          <div class="card-title " style="color:#708090;" *ngIf="!this.isLogin" >Login</div>
+             <a routerLink="login" class="btn-floating halfway-fab waves-effect btn-large blue" *ngIf="!this.isLogin"><i class="material-icons">arrow_forward</i></a>
+        </div>
+        <div class="card-content">
+          <h4 *ngIf="this.isLogin">Bem vindo!</h4>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+  
